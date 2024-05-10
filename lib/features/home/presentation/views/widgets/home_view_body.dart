@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kotobaty_app/features/home/presentation/views/widgets/custom_list_view_item.dart';
 
 import 'custom_app_bar.dart';
 class HomeViewBody extends StatelessWidget {
@@ -9,6 +10,7 @@ class HomeViewBody extends StatelessWidget {
     return const Column(
       children: [
         CustomAppBar(),
+        CustomListViewItem()
       ],
     );
   }
