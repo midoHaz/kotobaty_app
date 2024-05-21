@@ -11,7 +11,7 @@ class FeaturedBooksListView extends StatelessWidget {
       child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return  const FeaturedListViewItem();
+            return  const CustomBookImage();
           },separatorBuilder: (context,index){
             return const SizedBox(width: 15.0,);
       }, itemCount: 10,),
