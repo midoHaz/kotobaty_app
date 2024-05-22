@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:kotobaty_app/features/home/presentation/views/widgets/books_action.dart';
 import 'package:kotobaty_app/features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:kotobaty_app/features/home/presentation/views/widgets/custom_list_view_item.dart';
 
@@ -31,6 +32,8 @@ class BookDetailsViewBody extends StatelessWidget {
             ) ,
             const SizedBox(height: 18,),
             const BookRating(mainAxisAlignment: MainAxisAlignment.center,),
+            const SizedBox(height: 37,),
+            const BookAction(),
           ],
         ),
       ),
