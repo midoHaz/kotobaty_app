@@ -4,8 +4,8 @@ import 'package:kotobaty_app/features/home/presentation/views/widgets/book_ratin
 
 import '../../../../../core/utils/assets_manager.dart';
 import '../../../../../core/utils/styles.dart';
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class BookIListViewItem extends StatelessWidget {
+  const BookIListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
