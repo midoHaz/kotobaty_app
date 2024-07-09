@@ -20,7 +20,7 @@ class FeaturedBooksListView extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return  CustomBookImage(
-                image:state.books[index].volumeInfo.imageLinks.thumbnail
+                image:state.books[index].volumeInfo.imageLinks?.thumbnail??''
             );
           }, separatorBuilder: (context, index) {
           return const SizedBox(width: 15.0,);
