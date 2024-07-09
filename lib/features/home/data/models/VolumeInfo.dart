@@ -15,8 +15,6 @@ class VolumeInfo {
       this.pageCount, 
       this.printType, 
       this.categories, 
-      this.averageRating, 
-      this.ratingsCount, 
       this.maturityRating, 
       this.allowAnonLogging, 
       this.contentVersion, 
@@ -39,17 +37,15 @@ class VolumeInfo {
         industryIdentifiers.add(IndustryIdentifiers.fromJson(v));
       });
     }
-    readingModes = (json['readingModes'] != null ? ReadingModes.fromJson(json['readingModes']) : null)!;
+    readingModes = json['readingModes'] != null ? ReadingModes.fromJson(json['readingModes']) : null;
     pageCount = json['pageCount'];
     printType = json['printType'];
     categories = json['categories'] != null ? json['categories'].cast<String>() : [];
-    averageRating = json['averageRating'];
-    ratingsCount = json['ratingsCount'];
     maturityRating = json['maturityRating'];
     allowAnonLogging = json['allowAnonLogging'];
     contentVersion = json['contentVersion'];
-    panelizationSummary = (json['panelizationSummary'] != null ? PanelizationSummary.fromJson(json['panelizationSummary']) : null)!;
-    imageLinks = (json['imageLinks'] != null ? ImageLinks.fromJson(json['imageLinks']) : null)!;
+    panelizationSummary = json['panelizationSummary'] != null ? PanelizationSummary.fromJson(json['panelizationSummary']) : null;
+    imageLinks = json['imageLinks'] != null ? ImageLinks.fromJson(json['imageLinks']) : null;
     language = json['language'];
     previewLink = json['previewLink'];
     infoLink = json['infoLink'];
@@ -65,8 +61,6 @@ class VolumeInfo {
   int pageCount;
   String printType;
   List<String> categories;
-  int averageRating;
-  int ratingsCount;
   String maturityRating;
   bool allowAnonLogging;
   String contentVersion;
@@ -93,8 +87,6 @@ class VolumeInfo {
     map['pageCount'] = pageCount;
     map['printType'] = printType;
     map['categories'] = categories;
-    map['averageRating'] = averageRating;
-    map['ratingsCount'] = ratingsCount;
     map['maturityRating'] = maturityRating;
     map['allowAnonLogging'] = allowAnonLogging;
     map['contentVersion'] = contentVersion;

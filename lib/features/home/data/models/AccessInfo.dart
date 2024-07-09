@@ -3,16 +3,16 @@ import 'Pdf.dart';
 
 class AccessInfo {
   AccessInfo({
-      required this.country,
-      required this.viewability,
-      required this.embeddable,
-      required this.publicDomain,
-      required this.textToSpeechPermission,
-      required this.epub,
-      required this.pdf,
-      required this.webReaderLink,
-      required this.accessViewStatus,
-      required this.quoteSharingAllowed,});
+      this.country, 
+      this.viewability, 
+      this.embeddable, 
+      this.publicDomain, 
+      this.textToSpeechPermission, 
+      this.epub, 
+      this.pdf, 
+      this.webReaderLink, 
+      this.accessViewStatus, 
+      this.quoteSharingAllowed,});
 
   AccessInfo.fromJson(dynamic json) {
     country = json['country'];
@@ -20,8 +20,8 @@ class AccessInfo {
     embeddable = json['embeddable'];
     publicDomain = json['publicDomain'];
     textToSpeechPermission = json['textToSpeechPermission'];
-    epub = (json['epub'] != null ? Epub.fromJson(json['epub']) : null)!;
-    pdf = (json['pdf'] != null ? Pdf.fromJson(json['pdf']) : null)!;
+    epub = json['epub'] != null ? Epub.fromJson(json['epub']) : null;
+    pdf = json['pdf'] != null ? Pdf.fromJson(json['pdf']) : null;
     webReaderLink = json['webReaderLink'];
     accessViewStatus = json['accessViewStatus'];
     quoteSharingAllowed = json['quoteSharingAllowed'];
