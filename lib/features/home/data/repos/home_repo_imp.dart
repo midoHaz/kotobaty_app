@@ -2,8 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:kotobaty_app/core/errors/failure.dart';
 import 'package:kotobaty_app/core/utils/api_service.dart';
-import 'package:kotobaty_app/features/home/data/models/BookModel.dart';
 import 'package:kotobaty_app/features/home/data/repos/home_repo.dart';
+
+import '../models/Book_model.dart';
 
 class HomeRepoImp implements HomeRepository{
   ApiService apiService;

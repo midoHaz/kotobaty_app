@@ -2,7 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:kotobaty_app/features/home/data/repos/home_repo.dart';
 import 'package:meta/meta.dart';
 
-import '../../../data/models/BookModel.dart';
+import '../../../data/models/Book_model.dart';
+
 
 part 'featured_books_state.dart';
 

@@ -3,8 +3,8 @@ import 'SaleInfo.dart';
 import 'AccessInfo.dart';
 import 'SearchInfo.dart';
 
-class BookModel {
-  BookModel({
+class Items {
+  Items({
       this.kind, 
       this.id, 
       this.etag, 
@@ -14,7 +14,7 @@ class BookModel {
       this.accessInfo, 
       this.searchInfo,});
 
-  BookModel.fromJson(dynamic json) {
+  Items.fromJson(dynamic json) {
     kind = json['kind'];
     id = json['id'];
     etag = json['etag'];

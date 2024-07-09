@@ -3,7 +3,8 @@ import 'package:kotobaty_app/features/home/data/repos/home_repo.dart';
 import 'package:kotobaty_app/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:meta/meta.dart';
 
-import '../../../data/models/BookModel.dart';
+import '../../../data/models/Book_model.dart';
+
 
 part 'newest_books_state.dart';
 
