@@ -45,7 +45,7 @@ dependencies:
   get_it: ^7.7.0
   equatable: ^2.0.5
   cached_network_image: ^3.3.1
-
+  win32: ^5.5.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

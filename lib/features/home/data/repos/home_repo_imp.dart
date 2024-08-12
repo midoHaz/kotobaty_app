@@ -13,10 +13,14 @@ class HomeRepoImp implements HomeRepository{
   @override
   Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async{
     try{
-      var response = await apiService.get(endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:programming');
+      var response = await apiService.get(endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:computer science');
       List<BookModel> books= [];
       for (var item in response['items']){
-        books.add(BookModel.fromJson(item));
+        try{
+          books.add(BookModel.fromJson(item));
+        }catch(e){
+          print(item);
+        }
       }
       return Right(books);
     } catch(e){
