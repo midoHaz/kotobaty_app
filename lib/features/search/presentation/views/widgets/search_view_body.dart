@@ -4,7 +4,7 @@ import 'package:kotobaty_app/features/search/presentation/views/widgets/custom_s
 import 'package:kotobaty_app/features/search/presentation/views/widgets/search_result_list_view.dart';
 
 import '../../../../../core/utils/styles.dart';
-import '../../../../home/presentation/views/widgets/best_seller_list_view.dart';
+import '../../../../home/presentation/views/widgets/newest_books_list_view.dart';
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
 

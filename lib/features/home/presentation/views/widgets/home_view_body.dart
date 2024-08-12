@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kotobaty_app/core/utils/styles.dart';
 
-import 'best_seller_list_view.dart';
+import 'newest_books_list_view.dart';
 import 'best_seller_list_view_item.dart';
 import 'custom_app_bar.dart';
 import 'custom_list_view_item.dart';
@@ -12,6 +12,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
+      physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: Column(
@@ -28,7 +29,7 @@ class HomeViewBody extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
-                  'Best Seller',
+                  'Newest books',
                   style: Styles.textStyle18,
                 ),
               ),
@@ -41,7 +42,7 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30.0),
-            child: BestSellerListView(),
+            child: NewestBooksListView(),
           ),
         )
       ],
