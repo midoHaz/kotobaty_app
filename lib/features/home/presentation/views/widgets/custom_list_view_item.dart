@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:kotobaty_app/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:kotobaty_app/features/home/presentation/views/widgets/custom_error_widget.dart';
 import 'package:kotobaty_app/features/home/presentation/views/widgets/custom_loading_indicator.dart';
@@ -19,8 +20,13 @@ class FeaturedBooksListView extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return  CustomBookImage(
-                image:state.books[index].volumeInfo.imageLinks?.thumbnail??''
+            return  GestureDetector(
+              onTap: (){
+              GoRouter.of(context).push("/bookDetails",extra: state.books[index]);
+            },
+              child: CustomBookImage(
+                  image:state.books[index].volumeInfo.imageLinks?.thumbnail??''
+              ),
             );
           }, separatorBuilder: (context, index) {
           return const SizedBox(width: 15.0,);
