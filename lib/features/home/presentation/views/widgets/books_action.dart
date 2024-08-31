@@ -1,18 +1,19 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:kotobaty_app/core/functions/launch_url.dart';
+import 'package:kotobaty_app/features/home/data/models/Book_model.dart';
 import 'package:kotobaty_app/features/home/presentation/views/widgets/custom_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BookAction extends StatelessWidget {
-  const BookAction({super.key});
-
+  const BookAction({super.key, required this.bookModel});
+final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
-    return const Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 8.0),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             child: CustomButton(
               text: '19.99',
               foregroundColor: Colors.black,
@@ -25,10 +26,13 @@ class BookAction extends StatelessWidget {
           ),
           Expanded(
             child: CustomButton(
-              text: 'free Preview',
+              onPressed: ()async {
+                launchCustomUrl(context, bookModel.volumeInfo.previewLink);
+              },
+              text: getText(bookModel),
               foregroundColor: Colors.white,
-              backgroundColor: Color(0xffEf8262),
-              borderRadius: BorderRadius.only(
+              backgroundColor: const Color(0xffEf8262),
+              borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(16),
                 bottomRight: Radius.circular(16),
               ),
@@ -38,5 +42,13 @@ class BookAction extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String getText(BookModel bookmodel) {
+    if(bookModel.volumeInfo.previewLink == null){
+      return "Not Available";
+    }else{
+      return 'free Preview';
+    }
   }
 }
